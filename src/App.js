@@ -109,7 +109,6 @@ function App() {
 
     if (uniqueLetters.length === guessedLetters.length) {
       setScore(score + 100);
-      notify();
       startGame();
     }
 
@@ -147,17 +146,6 @@ function App() {
         stage === 'end' &&
         <GameOver restartGame={restartGame} score={score} />
       }
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
     </div>
   );
 }
